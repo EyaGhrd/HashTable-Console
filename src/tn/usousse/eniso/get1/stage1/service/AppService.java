@@ -53,7 +53,6 @@ public class AppService {
         int index = hachF(v);
         Node n = new Node(v, null);
        // table.getNodes()[0] = new Node("eya", null);
-        System.out.println("table at index 0 = " + table.getNodes()[0]);
 
         Node list = table.getNodes()[index];
         Node nc;
@@ -69,11 +68,11 @@ public class AppService {
                 nc.next = n;
             }
             table.getNodes()[index] = list;
-
             return true;
         } else {
             return false;
         }
+
 
     }
    public boolean remove(String value) {
@@ -101,26 +100,6 @@ public class AppService {
        }
        return false;
    }
-
-          /* boolean test=false;
-       int index=hachF(value);
-       Node currentNode=table.getNodes()[index];
-       if (find(value)){
-           if (currentNode.getNext()==null){
-               table.getNodes()[index]=null;
-               test=true;
-           }
-           else {
-                 while (currentNode.getValue()!=value){
-                     currentNode=currentNode.getNext();
-                     table.getNodes()[index].getNext().setNext(currentNode.getNext());
-                   }
-                   table.getNodes()[index].setNext(currentNode.getNext());
-                   test=true;
-               }
-           }
-       return test;*/
-
 
     public void list() {
         Node nodeTab = null;
